@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    cin.sync_with_stdio(false); 
+    cin.tie(NULL);    
+   char str[10000];
+   cin>>str;
+   cout<<str<<"\n";
+   int n=strlen(str);
+   cout<<n<<"\n";
+   //reverse(str,str+n);
+   //cout<<str<<"\n";
+   int start=0;
+   int i;
+   for(i=0;i<n;i++)
+   {
+       if(str[i]=='.')
+          {
+            reverse(str+start,str+i);
+            cout<<str<<"\n";
+            start=i+1;
+          }
+   }
+   reverse(str+start,str+i);
+   reverse(str,str+n);
+   cout<<str;
+}

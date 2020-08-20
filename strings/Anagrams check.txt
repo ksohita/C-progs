@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    cin.sync_with_stdio(false); 
+    cin.tie(NULL);    
+    string str1;
+    cin>>str1;
+    string str2;
+    cin>>str2;
+    int k=0;
+    int hash[256]={0};
+    if(str1.length()!=str2.length())
+    {
+        cout<<"NO";
+    }
+    else
+    {
+        for(int i=0;i<str1.length();i++)
+        {
+            hash[str1[i]]++;
+        }
+        
+        for(int i=0;i<str2.length();i++)
+        {
+            hash[str2[i]]--;
+        }
+       
+        for(int i=0;i<256;i++)
+        {
+            if(hash[i]!=0)
+            {
+                cout<<"NO"<<"\n";
+                k=1;
+                break;
+            }
+        }
+        
+        if(k==0)
+        cout<<"YES"<<"\n";
+        
+    }
+ }
+
+I/P:
+abhg
+hgba
+O/P:
+YES

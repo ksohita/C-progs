@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    cin.sync_with_stdio(false); 
+    cin.tie(NULL);    
+    string str;
+    cin>>str;
+    int n=str.length();
+    int start=0;
+    int k=0;
+    int i=0;
+    int end=str.length();
+    while(i<=str.length()/2)
+    {
+      if(str[start]!=str[end-1])
+      {
+          cout<<"NO"<<"\n";
+          k=1;
+          break;
+      }
+      start+=1;
+      end=end-1;
+      i++;
+      
+    }
+    if(k==0)
+    cout<<"Yes"<<"\n";
+}
+    
+    
+    
+   

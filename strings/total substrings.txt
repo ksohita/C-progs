@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    cin.sync_with_stdio(false); 
+    cin.tie(NULL);    
+    string str;
+    cin>>str;
+    int n=str.length();
+    cout<<"Total number of non-empty substrings are:"<<"\n";
+    cout<<n*(n+1)/2;
+}
+
+
+I/P:
+abcd
+O/P:
+Total number of non-empty substrings are:
+10
